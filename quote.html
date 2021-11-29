@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Get A Quote!</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Move It Or Lose It Quote Estimate</h1>
+        <nav role="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="quote.html">Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="jumbotron">
+            <div id="output"></div>
+                <div id="quote-gen"></div>
+                <div id="for-flexbox">
+                    <div id="form-content">  
+                    <form id = "form" class="form-horizontal">
+                        <div class = "form-group">
+                            <label for="from" class="col-xs-2">Address moving from:</label>
+                                <div class="origin_div">
+                                     <i class="fas fa-truck"></i> <input type="text" id="from" placeholder="Origin" class="form-control">
+                                </div>
+                             <label for="to" class="col-xs-2">Address moving to:</label>
+                                <div class="dest_div">
+                                    <i class="fas fa-home"></i><input type="text" id="to" placeholder="Destination" class="form-control">
+                                </div>
+                            <label for="rooms" class="col-xs-2"> How many rooms are you moving?</label>
+                                <div class="num-rooms">
+                                   <input type="number" id="rooms" class="form-control">
+                                </div>
+                             <label for="outOfBuncombe" class="col-xs-2">Are both pick up and drop off locations in Buncombe County? </label>
+                                <div class="outOfBuncombe-q">
+                                    <input type="radio" name="outOfBuncombe" id="buncombe-yes" value="yes">Yes<br>   
+                                    <input type="radio" name="outOfBuncombe" id="buncombe-no" value="no">No<br>    
+                                </div>
+                             <label for="heavy" class="col-xs-2">Does any item weigh more than 300 pounds? </label>
+                                <div class="heavy-q">
+                                    <input type="radio" name="heavy" id="heavy-yes" value="yes">Yes<br>   
+                                    <input type="radio" name="heavy" id="heavy-no" value="no">No<br>    
+                                </div>
+                            <label for="stairs" class="col-xs-2">Are there stairs? </label>
+                                <div class="stairs-q">
+                                    <input type="radio" name="stairs" id="stairs-yes" value="yes">Yes<br>   
+                                    <input type="radio" name="stairs" id="stairs-no" value="no">No<br>    
+                                </div>
+                            <label for="truck" class="col-xs-2">Is the driveway accessible by box truck? </label>
+                                <div class="truck-q">
+                                    <input type="radio" name="truck" id="truck-yes" value="yes">Yes<br>   
+                                    <input type="radio" name="truck" id="truck-no" value="no">No<br>    
+                                </div>
+                            <label for="landfill" class="col-xs-2">Does anything need to go to the landfill? </label>
+                                <div class="landfill-q">
+                                    <input type="radio" name="landfill" id="landfill-yes" value="yes">Yes<br>   
+                                    <input type="radio" name="landfill" id="landfill-no" value="no">No<br>    
+                                </div>
+                        </div>
+                    </form>
+                    <div class="button">
+                        <button id="form-button" class="get-est" onclick="calcQuote();">Get Estimate</button>
+                    </div>
+                </div>
+            <div class = "reset">
+                <button id="form-reset" class="get-reset" onclick="reset();">Reset</button> 
+            </div>
+           
+            <div class="container-fluid">
+                <div id="map"></div>
+            </div>
+            </div>
+        </div> 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChwv8sBwmOw7gLlMDZbXEdPCktvloy8jQ&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/app.js"></script>
+    </body>
+</html>
+
