@@ -1,4 +1,5 @@
 
+
 //javascript.js
 
 //set map options
@@ -102,7 +103,18 @@ function calcQuote() {
                 //display estimate
                 quote.innerHTML = "Your junk removal quote: $" + estimate;
                     //+ " Rooms: " + rooms + " totalTime: " + totalTime + " hours: " + hours + " totalGas: " + totalGas + " mileage: " + mileage;
-
+                
+                //if estimated hours is 1 hour or less, make the short job scheduler available
+                if(totalTime<=1){ 
+                    output.innerHTML = "<button id='form-schedule' class='get-schedule' onclick='scheduleShort()'>Schedule A Job</button>";
+                } else if(totalTime<=4) {
+                  //if estimated totalTime is between 1 and 4 hours, make the standard job scheduler available
+                   output.innerHTML = "<button id='form-schedule' class='get-schedule' onclick='scheduleStandard()'>Schedule A Job</button>";
+                } else if(totalTime<=9) {
+                  //if estimated totalTime is between 1 and 4 hours, make the standard job scheduler available
+                   output.innerHTML = "<button id='form-schedule' class='get-schedule' onclick='scheduleLong()'>Schedule A Job</button>";
+                }
+                
                 //display route
                 directionsDisplay.setDirections(result);
             } else {
@@ -120,6 +132,21 @@ function calcQuote() {
     }
 
 } 
+
+function scheduleShort() {
+    //open short job calendar in new tab
+    window.open("https://moveitorloseitshort.simplybook.me/v2/#book", '_blank');
+}
+
+function scheduleStandard() {
+    //open standard job calednar in new tab
+     window.open("https://moveitorloseit.simplybook.me/v2/#book", '_blank');
+}
+
+function scheduleLong() {
+    //open standard job calednar in new tab
+     window.open("https://moveitorloseitlong.simplybook.me/v2/#book", '_blank');
+}
 
 function reset() {
     document.getElementById("form-content").style.display = "";
