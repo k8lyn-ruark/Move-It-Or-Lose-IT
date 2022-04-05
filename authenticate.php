@@ -39,10 +39,10 @@ if ($stmt = $con->prepare('SELECT id, password FROM employee_accounts WHERE user
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-        if($_POST['username'] = 'administrator'){
+        if($_POST['username'] == 'administrator'){
             header('Location: administrator.php');
         } else { 
-		header('Location: employee.php');
+		header('Location: administrator.php');
         }
 	} else {
 		// Incorrect password

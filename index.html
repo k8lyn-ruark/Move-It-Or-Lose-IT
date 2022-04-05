@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Move It Or Lose It!</title>
         <link rel="stylesheet" href="css/main.css">
+        <meta name="viewport" content="width=device-width">
         <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
+        <script src="js/images.js"></script>
     </head>
     <body>
-        
-        <h1>Move It Or Lose It!</h1>
+        <header>
+            <img src="images/Color%20logo%20-%20no%20background_400.png" alt="Company logo in black with words 'Move It Or Lose It!' beside a circle with a racoon in the center.">
+        </header>
          <nav role="navigation">
              <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,12 +21,32 @@
                  <li><a href="login.html">Employees</a></li>
             </ul>
         </nav>
-        <h2>Western North Carolina's Most Affordable Junk Removal Business</h2>
-        <p>"We pick things up and we put them down!"</p>
-        
-        <div id="quote">
-            <p><a class="index-btn" href=quote.html>Get Your Quote Today!</a></p>
+        <div id="about" class="grid-container">
+            <div id="intro-info" class="grid-item">
+                    <h2>The Most Affordable Professional Hauling Service in WNC!</h2>
+            </div>
+        <div id="blurb" class="grid-item">
+            <p>Femme Owned, Fair, & Friendly to People and Planet.</p>
+            <p id="schlep">Schlepping, Hauling, Junk Removal and More! What’s schlepping you ask? We pick things up and put them down. What is hauling? We make things that were in one place, magically appear in another place. How do we do it? We achieve this through genuine ingenuity, and sheer force of will, using a 16 foot box truck. We are experts at tetris. We donate. We recycle. We keep things out of the landfill whenever possible.</p>
+                
+            <p>And what’s more you ask? Be creative! What do you need help with? Give us a call! If we can not personally help you, we will try to direct you to someone who can. </p>
+        </div>
+            
+        <div id="quote" class="grid-item">   
+            <h4><a class="index-btn" href=quote.html>Get Your Free Quote!</a></h4>
         </div>
         
+        <div id="content" class="grid-item">
+            <div class="content">
+                <div class="images"> 
+                    <img src="images/truck-face.jpg" alt="Side of the box truck with 'Move It Or Lose It' and a racoon painted on it. The owner is sitting close to the truck and is looking off to the side." class="slideshow-img" height="466" width="800">
+                    <img src="images/truck-alone.jpg" alt="Side of the box truck with 'Move It Or Lose It' and a racoon painted on it. The back of the truck is also visible with a yellow background and the face of a racoon painted on it with the words 'Schlepping, hauling, junk removal and more! in purple.'" style="display:none" class="slideshow-img" height="466" width="800">
+                    <img src="images/truck-lean.jpg" alt="Side of the box truck with the side of a racoon's face painted on it along with rainbow colors radiating from it's face. The owner is wearing red overalls and a dark blue and red plaid shirt and is leaning against the front of the truck." style="display:none" class="slideshow-img" height="466" width="800">
+                    <img src="images/truck-close3.jpg" alt="View of the side of the box truck with 'Move It Or Lose It' and a racoon painted on it. The back of the truck is also visible at an angle showing a yellow background with the face of a racoon painted on it and the words 'Schlepping, hauling, junk removal and more! in purple. The owner is wearing red overalls, a dark blue and red plaid shirt, and a tail while actively closing the door to the back of the truck." style="display:none"  class="slideshow-img" height="466" width="800">
+                </div>
+            </div>
+        </div>
+
+    </div>
     </body>
 </html>

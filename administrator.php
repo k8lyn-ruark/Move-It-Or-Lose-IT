@@ -20,7 +20,9 @@ if (!isset($_SESSION['loggedin'])) {
     </head>
     <body>
         
-        <h1>Move It Or Lose It!</h1>
+        <header>
+            <img src="images/Color%20logo%20-%20no%20background_400.png" alt="Company logo in black with words 'Move It Or Lose It!' beside a circle with a racoon in the center.">
+        </header>
          <nav role="navigation">
              <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,13 +31,26 @@ if (!isset($_SESSION['loggedin'])) {
                  <li><a href="login.html">Employees</a></li>
             </ul>
         </nav>
-		<div class="content">
-			<h2>Administrator Headquarters</h2>
-			<p>Welcome back, <?=$_SESSION['name']?>!</p>
-            <!--THE SHIFT PICK UP FEATURE GOES HERE!!!! -->
-		</div>
-        <div id="logout">
-            <p><a class="index-btn" href=logout.php>Logout</a></p>
+        <div id="login-content"> 
+            <div class="content">
+                <h2>Administrator Headquarters</h2>
+                <h4>Welcome back, <?=$_SESSION['name']?>!</h4>
+            </div>
+             <div id="email-form">
+                <p>Send Promotional Email Through the Form: </p>
+
+                <form action="promotional.php" method="POST" class="form">
+                    <label for="email-subject">Email Subject: </label>
+                        <input type="text" name="email-subject" id="email-subject" required><br>
+                    <br><label for="email-message">Email Message: </label>
+                    <textarea name="email-message" id="email-message" rows="15" cols="40" placeholder="Your message here."></textarea><br>
+                    <button type="submit" onclick="sentEmails();">Send</button>
+                </form>
+            </div>
+            <div id="logout">
+                <br><a class="index-btn" href=logout.php>Logout</a>
+            </div>
         </div>
+        <script src="js/thankyou.js"></script>
 	</body>
 </html>

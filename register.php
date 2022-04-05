@@ -60,7 +60,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM employee_accounts WHERE user
             $subject = 'Account Activation Required';
             $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
             // Update the activation variable below
-            $activate_link = 'https://www.cs.unca.edu/~kruark/moveitorloseit_with_logins_and_calendar/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
+            $activate_link = 'https://www.cs.unca.edu/~kruark/moveitorloseit_final4/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
             $message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
             mail($_POST['email'], $subject, $message, $headers);
             echo 'Please check your email to activate your account!';

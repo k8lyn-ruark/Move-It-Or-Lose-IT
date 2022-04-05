@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- code taken from https://startutorial.com/view/how-to-build-a-php-booking-calendar-with-mysql -->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +10,9 @@
         <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        
-        <h1>Move It Or Lose It!</h1>
+        <header>
+            <img src="images/Color%20logo%20-%20no%20background_400.png">
+        </header>
          <nav role="navigation">
              <ul>
                 <li><a href="index.html">Home</a></li>
@@ -47,7 +48,7 @@
                             $newcode = 'activated';
                             $stmt->bind_param('sss', $newcode, $_GET['email'], $_GET['code']);
                             $stmt->execute();
-                            echo 'Your account is now activated! You can now <a href="login.html">login</a>!';
+                            echo '<p style="text-align: center;">Your account is now activated! You can now <a href="login.html">login</a>.</p>!';
                         }
                     } else {
                         echo 'The account is already activated or doesn\'t exist!';
